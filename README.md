@@ -20,7 +20,7 @@ The model was deployed on an `ml.m5.xlarge` instance.
 In order to make inferences using the deployed endpoint, we create three lambda functions and organize them into a step function. The code of lambda functions can be found in the file [lambda.py](lambda.py)
 
 ### Lambda functions
-1. Lambda 1 serializes image data. That is, the function copies an object from S3, base64 encodes it, and then returns it to the step function as `image_data` in an event.
+1. Lambda 1 serializes image data. That is, the function copies an object from S3, base64 encodes it, and then returns it to the step function as an event.
 2. Lambda 2 performs actual classification using the deployed model. Namely, it takes the image output from Lambda 1, decodes it, and then passes inference back to the the step function.
 3. Lambda 3 filters low-confidence inferences. If the model predicts a score lower than a certain threshold (0.9 in our case), then the inference is not considered as definitive and it's not passed further.
 
