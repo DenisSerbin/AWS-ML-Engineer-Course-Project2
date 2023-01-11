@@ -17,7 +17,7 @@ We create a Sagemaker estimator with two classes (to distinguish bikes from moto
 The model was deployed on an `ml.m5.xlarge` instance.
 
 ## Inference
-In order to make inferences using the deployed endpoint, we create three lambda functions and organize them into a step function. The code of lambda functions can be found in the file [Lambdas](lambda.py)
+In order to make inferences using the deployed endpoint, we create three lambda functions and organize them into a step function. The code of lambda functions can be found in the file [lambda.py](lambda.py)
 
 ### Lambda functions
 1. Lambda 1 serializes image data. That is, the function copies an object from S3, base64 encodes it, and then returns it to the step function as `image_data` in an event.
