@@ -35,7 +35,7 @@ Unsuccsessful run (created for testing purposes) of the step function:
 
 ### Testing
 We ran the model on several input images and the below figure shows the output probabilities regardless of the predicted class.
-![Observed inferences](Screenshots/observed_inferences.png "Observed inferences")
+![Observed inferences](Screenshots/Observed_inferences.png "Observed inferences")
 
 The next figure shows the distribution between the predicted classes and also low-confidence inferences.
 ![Class distribution](Screenshots/Class_distribution.png "Class distribution")
